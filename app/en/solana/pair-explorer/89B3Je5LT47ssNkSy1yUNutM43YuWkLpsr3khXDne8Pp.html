@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+  <head>
+    <meta charset="utf-8">
+    <base href="/app/">
+    <!-- IMPORTANT: disable Safari auto-zoom for inputs with font-size smaller than 16px -->
+    <!-- See: https://www.stefanjudis.com/notes/mobile-safari-doesnt-zoom-into-form-inputs-with-minimum-16px/ -->
+    <!-- See: https://techstacker.com/html-disable-auto-zoom-input-element-ios/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>DEXTools.io</title>
+    <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
+    <link rel="preconnect" href="https://request-global.czilladx.com" crossorigin="use-credentials">
+    <link rel="preconnect" href="https://cdn.coinzilla.com">
+    <link rel="preconnect" href="https://cdn.coinzilla.io">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="DEXTools">
+    <meta name="description" content="DEXTools, the gateway to DEFI, real-time charts, history and all token info from blockchain.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#20263c">
+    <link rel="apple-touch-icon" href="https://www.dextools.io/app/assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="https://www.dextools.io/app/assets/img/logo/dext-large.png">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dextools.io/app">
+    <meta property="og:title" content="DEXTools">
+    <meta property="og:description" content="DEXTools, the gateway to DEFI, real-time charts, history and all token info from blockchain.">
+    <meta property="og:site_name" content="DEXTools.io">
+    <!-- The image should be smaller than 315px so that it is put aside with the description -->
+    <!-- See: https://developers.facebook.com/docs/sharing/webmasters/images -->
+    <meta property="og:image" content="https://www.dextools.io/app/assets/img/logo/dext-large-preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="DEXTools">
+    <!-- This is the actual width/height of the image -->
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <!-- Facebook only: fb:app_id is a "required" tag so we use the Facebook's default APP ID -->
+    <meta property="fb:app_id" content="966242223397117">
+
+    <!-- Twitter / Telegram - IMPORTANT: Telegram bases its preview images on Twitter sharing cards markup! -->
+    <!-- IMPORTANT: don't use name="twitter:card" content="summary_large_image" cause it shows a very large image -->
+    <meta name="twitter:url" content="https://www.dextools.io/app">
+    <meta name="twitter:title" content="DEXTools">
+    <meta name="twitter:description" content="DEXTools, the gateway to DEFI, real-time charts, history and all token info from blockchain.">
+    <meta name="twitter:image" content="https://www.dextools.io/app/assets/img/logo/dext-large.png">
+    <meta name="twitter:image:alt" content="DEXTools">
+    <meta name="twitter:site" content="@DEXToolsApp">
+    <meta name="twitter:creator" content="@DEXToolsApp">
+  <style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#00b8d8;--bs-secondary:#818ea3;--bs-success:#17c671;--bs-info:#0dcaf0;--bs-warning:#ffb400;--bs-danger:#ea3943;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:0, 184, 216;--bs-secondary-rgb:129, 142, 163;--bs-success-rgb:23, 198, 113;--bs-info-rgb:13, 202, 240;--bs-warning-rgb:255, 180, 0;--bs-danger-rgb:234, 57, 67;--bs-light-rgb:248, 249, 250;--bs-dark-rgb:33, 37, 41;--bs-primary-text-emphasis:#004a56;--bs-secondary-text-emphasis:#343941;--bs-success-text-emphasis:#094f2d;--bs-info-text-emphasis:#055160;--bs-warning-text-emphasis:#664800;--bs-danger-text-emphasis:#5e171b;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#ccf1f7;--bs-secondary-bg-subtle:#e6e8ed;--bs-success-bg-subtle:#d1f4e3;--bs-info-bg-subtle:#cff4fc;--bs-warning-bg-subtle:#fff0cc;--bs-danger-bg-subtle:#fbd7d9;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#99e3ef;--bs-secondary-border-subtle:#cdd2da;--bs-success-border-subtle:#a2e8c6;--bs-info-border-subtle:#9eeaf9;--bs-warning-border-subtle:#ffe199;--bs-danger-border-subtle:#f7b0b4;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:"Poppins", "Roboto", sans-serif;--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33, 37, 41;--bs-body-bg:#fff;--bs-body-bg-rgb:255, 255, 255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0, 0, 0;--bs-secondary-color:rgba(33, 37, 41, .75);--bs-secondary-color-rgb:33, 37, 41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233, 236, 239;--bs-tertiary-color:rgba(33, 37, 41, .5);--bs-tertiary-color-rgb:33, 37, 41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248, 249, 250;--bs-heading-color:inherit;--bs-link-color:#00b8d8;--bs-link-color-rgb:0, 184, 216;--bs-link-decoration:underline;--bs-link-hover-color:#0093ad;--bs-link-hover-color-rgb:0, 147, 173;--bs-code-color:#d63384;--bs-highlight-color:#212529;--bs-highlight-bg:#fff3cd;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, .175);--bs-border-radius:.375rem;--bs-border-radius-sm:.25rem;--bs-border-radius-lg:.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);--bs-box-shadow-sm:0 .125rem .25rem rgba(0, 0, 0, .075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, .175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, .075);--bs-focus-ring-width:.25rem;--bs-focus-ring-opacity:.25;--bs-focus-ring-color:rgba(0, 184, 216, .25);--bs-form-valid-color:#17c671;--bs-form-valid-border-color:#17c671;--bs-form-invalid-color:#ea3943;--bs-form-invalid-border-color:#ea3943}*,*:before,*:after{box-sizing:border-box}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}h2{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}h2{font-size:calc(1.275rem + .3vw)}@media (min-width: 1200px){h2{font-size:1.5rem}}p{margin-top:0;margin-bottom:1rem}img{vertical-align:middle}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px}p{margin-bottom:1.75rem}.app-loading{width:100%;height:100vh;position:absolute;inset:0}.app-loading .app-dxt-loading{display:flex;justify-content:center;align-items:center;overflow:hidden;padding:1rem 0;position:absolute;z-index:3;top:50%;left:50%;transform:translate(-50%,-50%);width:100%}.app-loading .app-dot-pulse{position:relative;left:-624.9375rem;width:.5rem;height:.5rem;border-radius:3.125rem}.app-loading .app-dot-pulse:before,.app-loading .app-dot-pulse:after{content:"";display:inline-block;position:absolute;top:0;width:.5rem;height:.5rem;border-radius:.3125rem}.app-loading.light{background-color:#fff}.app-loading.light .app-dot-pulse:before,.app-loading.light .app-dot-pulse:after{background-color:#0b1217;color:#0b1217}.app-loading.light .app-dot-pulse{background-color:#0b1217;color:#0b1217;box-shadow:624.9375rem 0 0 -.3125rem #0b1217;animation:dotpulse 1.5s infinite linear;animation-delay:.25s}.app-loading.light .app-dot-pulse:before{box-shadow:624rem 0 0 -.3125rem #0b1217;animation:dotpulsebefore 1.5s infinite linear;animation-delay:0s}.app-loading.light .app-dot-pulse:after{box-shadow:625.875rem 0 0 -.3125rem #0b1217;animation:dotpulseafter 1.5s infinite linear;animation-delay:.5s}.app-loading.dark{background-color:#0b1217}.app-loading.dark .app-dot-pulse:before,.app-loading.dark .app-dot-pulse:after{background-color:#fff;color:#fff}.app-loading.dark .app-dot-pulse{background-color:#fff;color:#fff;box-shadow:624.9375rem 0 0 -.3125rem #fff;animation:dotpulsedark 1.5s infinite linear;animation-delay:.25s}.app-loading.dark .app-dot-pulse:before{box-shadow:624rem 0 0 -.3125rem #fff;animation:dotpulsebeforedark 1.5s infinite linear;animation-delay:0s}.app-loading.dark .app-dot-pulse:after{box-shadow:625.875rem 0 0 -.3125rem #fff;animation:dotpulseafterdark 1.5s infinite linear;animation-delay:.5s}@keyframes dotpulsebefore{0%{box-shadow:624rem 0 0 -.3125rem #0000006b}30%{box-shadow:624rem 0 0 .125rem #0000006b}60%,to{box-shadow:624rem 0 0 -.3125rem #0000006b}}@keyframes dotpulse{0%{box-shadow:624.9375rem 0 0 -.3125rem #000}30%{box-shadow:624.9375rem 0 0 .125rem #000}60%,to{box-shadow:624.9375rem 0 0 -.3125rem #000}}@keyframes dotpulseafter{0%{box-shadow:625.875rem 0 0 -.3125rem #0000006b}30%{box-shadow:625.875rem 0 0 .125rem #0000006b}60%,to{box-shadow:625.875rem 0 0 -.3125rem #0000006b}}@keyframes dotpulsebeforedark{0%{box-shadow:624rem 0 0 -.3125rem #ffffff6b}30%{box-shadow:624rem 0 0 .125rem #ffffff6b}60%,to{box-shadow:624rem 0 0 -.3125rem #ffffff6b}}@keyframes dotpulsedark{0%{box-shadow:624.9375rem 0 0 -.3125rem #ffffff6b}30%{box-shadow:624.9375rem 0 0 .125rem #fff}60%,to{box-shadow:624.9375rem 0 0 -.3125rem #fff}}@keyframes dotpulseafterdark{0%{box-shadow:625.875rem 0 0 -.3125rem #ffffff6b}30%{box-shadow:625.875rem 0 0 .125rem #ffffff6b}60%,to{box-shadow:625.875rem 0 0 -.3125rem #ffffff6b}}@font-face{font-family:Poppins;src:url("./media/Poppins-Regular-FGRT6IK6.woff2") format("truetype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url("./media/Poppins-Medium-FHQL7PIN.woff2") format("truetype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url("./media/Poppins-SemiBold-DTBYZYFV.woff2") format("truetype");font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url("./media/Poppins-Bold-MHU27I4X.woff2") format("truetype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url("./media/Poppins-ExtraBold-S2ROK7TC.woff2") format("truetype");font-weight:800;font-style:normal;font-display:swap}@font-face{font-family:Poppins;src:url("./media/Poppins-Black-E6LBGQQL.woff2") format("truetype");font-weight:900;font-style:normal;font-display:swap}html{font-family:Poppins,sans-serif;font-size:16px;font-weight:400}body{font-weight:400;height:100%!important;color:#142028;background-color:#fff;position:relative}*{scrollbar-width:thin;scrollbar-color:#818ea3 white}*::-webkit-scrollbar{width:.75rem;height:.75rem}*::-webkit-scrollbar-track{background:#fff}*::-webkit-scrollbar-thumb{background-color:#818ea3;border-radius:1.25rem;border:.1875rem solid white}h2{color:#142028}p{font-family:Poppins,Roboto,sans-serif;font-style:normal;-moz-osx-font-smoothing:grayscale;font-weight:400;font-size:13px;line-height:16px;line-height:revert}</style><link rel="stylesheet" href="styles-VCXXQHIS.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-VCXXQHIS.css"></noscript></head>
+  <body>
+    <noscript>
+      <style>
+        /* Font faces are already defined in the inlined stylesheet added in <head> by the Angular CLI optimizations done during compilation */
+        body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #0b1217;
+          color: #ffffff;
+        }
+
+        .no-js-warning {
+          text-align: center;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+        }
+
+        .no-js-warning .logo {
+          height: 50px;
+          width: auto;
+          margin-bottom: 10px;
+        }
+
+        .no-js-warning h2 {
+          color: #ffffff;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .app-loading {
+          display: none;
+        }
+      </style>
+
+      <div class="no-js-warning" role="alertdialog" aria-busy="true" aria-live="assertive">
+        <header>
+          <img class="logo" src="assets/img/logo/dextools_logo_full_dark.svg" alt="dextools logo">
+        </header>
+        <div class="content">
+          <h2>Hum! It seems JavaScript is disabled</h2>
+          <p>You must have JavaScript enabled to run this app!</p>
+        </div>
+      </div>
+    </noscript>
+    <app-root>
+      <!-- IMPORTANT: both themes are added here so that the inlined styles optimizations done by Angular CLI pick all the theme styles needed for this block -->
+      <!-- The class of the unused theme will be removed afterwards (see <script> below) -->
+      <div class="app-loading light dark" id="appLoader">
+        <div class="app-dxt-loading">
+          <div class="app-dot-pulse"></div>
+        </div>
+      </div>
+    </app-root>
+    <script type="module" src="https://www.dextools.io/puppet/main.js"></script>
+    <script>
+      const configApp = JSON.parse(localStorage.getItem('configApp')) || null;
+      const unusedTheme = configApp && configApp.dark_theme === false ? 'dark' : 'light';
+      const appLoader = document.getElementById('appLoader');
+      if (appLoader) {
+        appLoader.classList.remove(unusedTheme);
+      }
+
+      const academy = JSON.parse(localStorage.getItem('academy')) || null;
+      const isFirstTime = academy?.videoVersion !== '01';
+
+      if (isFirstTime) {
+        const preloadImage = document.createElement('link');
+        preloadImage.rel = 'preload';
+        preloadImage.href = 'assets/img/video-home.webp';
+        preloadImage.as = 'image';
+        preloadImage.fetchPriority = 'high';
+
+        document.head.appendChild(preloadImage);
+      }
+    </script>
+  <link rel="modulepreload" href="chunk-JGOFKK65.js"><link rel="modulepreload" href="chunk-FLAJG7QS.js"><link rel="modulepreload" href="chunk-45UF2BUR.js"><link rel="modulepreload" href="chunk-6CHOK5P6.js"><link rel="modulepreload" href="chunk-J6GFEH3J.js"><link rel="modulepreload" href="chunk-QPSPMSA2.js"><link rel="modulepreload" href="chunk-J7R5PUSH.js"><link rel="modulepreload" href="chunk-7SI274YK.js"><link rel="modulepreload" href="chunk-IFQMJ6R7.js"><link rel="modulepreload" href="chunk-YNJVGNKO.js"><script src="polyfills-ZX6DEWPV.js" type="module"></script><script src="scripts-RRHG33BL.js" defer></script><script src="main-RCUL5KCE.js" type="module"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'905601653f9103f0',t:'MTczNzQ0ODg4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
